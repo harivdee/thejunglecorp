@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,700,500,300);
+
+html {
+  height:100%
+}
+
+body {
+  background-image:url(/img/image-from-rawpixel-id-576794-jpeg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 15px;
+  margin: 15px;
+}
+
+small {
+  font-size: 12px;
+  text-transform: lowercase;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+}
+
+.navicon {
+  width: 100%;
+  background: transparent;
+  margin: 80px auto 40px;
+  position: relative;
+  height: 30px;
+  width: 50px;
+  display: block;
+  z-index: 99;
+  transition: linear 0.5s all;
+}
+.navicon:before, .navicon:after {
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  content: "";
+  height: 3px;
+  left: 0;
+  transition: 0.8s ease;
+  width: 45px;
+}
+.navicon:before {
+  box-shadow: #fff 0 14px 0 0;
+  position: absolute;
+  top: 0;
+}
+.navicon:after {
+  position: absolute;
+  top: 28px;
+}
+.navicon--active {
+  margin-top: 20px;
+  transition: linear 0.5s all;
+}
+.navicon--active:before {
+  box-shadow: transparent 0 0 0 0;
+  top: 15px;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+.navicon--active:after {
+  top: 15px;
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+.toggle {
+  margin: 20px auto;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  opacity: 0;
+  transition: ease-in 0.5s all;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  min-width: 320px;
+}
+.toggle--active {
+  display: block;
+  opacity: 1;
+  transition: ease-in 0.5s all;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.toggle__menu {
+  margin-bottom: 25px;
+  padding: 0%;
+  position: relative;
+  text-align: center;
+ 
+}
+
+.ul{
+  list-style-position: inside;
+  text-align: center;
+}
+
+.toggle__menu li {
+  width: 25%;
+  display: block;
+  margin: 10px auto;
+}
+
+.toggle__menu li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: linear 0.5s all;
+  font-weight: 500;
+  padding: 5px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.toggle__menu li a span {
+  text-transform: lowercase;
+}
+.toggle__menu li a:hover {
+  color: #db5523;
+  border-bottom: 2px solid #db5523;
+  transition: linear 0.5s all;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  font-weight: 700;
+}
+
+.social {
+  display: block;
+  padding: 0;
+  width: 70%;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 0;
+}
+.social li {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+.social li a {
+  text-align: center;
+  color: #000;
+  font-size: 25px;
+  transition: linear 0.5s all;
+}
+.social li a:hover {
+  color: #db5523;
+  transition: linear 0.5s all;
+}
+
+.info {
+  margin: 20px auto;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  min-width: 320px;
+  display: block;
+}
+
+#main-menu .nav-bar { 
+  list-style:none;
+  line-height: 2em; 
+  margin-top: 40px; 
+}
+
+#main-menu .nav-bar li { 
+  display:inline; 
+  padding:0 10px; }
+
+#main-menu .nav-bar li a {
+text-decoration: none;
+padding-left: 25px;
+text-transform: uppercase;
+color: antiquewhite;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+.nav-bar .nav-button-home a { 
+  background-image:url("/img/pixel-crochet-loom-beading.jpg"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: -2px;
+   
+}
+
+.nav-bar .nav-button-students a { 
+  background:url("/img/th1.jpg"); 
+  background-repeat: no-repeat;
+  background-position-y: -2px;
+  background-size: contain; 
+}
+
+.nav-bar .nav-button-trainers a { 
+  background:url("/img/th3.jpg"); 
+  background-repeat: no-repeat;
+  background-position-y: -2px;
+  background-size: contain;    
+}
+
+.nav-bar .nav-button-assignments a { 
+  background:url("/img/th.jpg"); 
+  background-repeat: no-repeat;
+  background-position-y: -2px;
+  background-size: contain;    
+}
+
+.nav-bar .nav-button-courses a { 
+  background:url("/img/th4.jpg"); 
+  background-repeat: no-repeat;
+  background-position-y: -2px;
+  background-size: contain;    
+}

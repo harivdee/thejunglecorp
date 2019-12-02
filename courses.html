@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://use.fontawesome.com/c5a0aa5865.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="icon" type="image/png" href="/img/clipart-trees-rainforest-15.png">
+    <title>Courses</title>
+</head>
+
+<body>
+    <nav id="main-menu">
+        <ul class="nav-bar">
+            <li class="nav-button-home"><a href="index.html">Home</a></li>
+            <li class="nav-button-students"><a href="students.html">Students</a></li>
+            <li class="nav-button-trainers"><a href="trainers.html">Trainers</a></li>
+            <li class="nav-button-assignments"><a href="assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+    <section id="courses">
+        <form>
+
+            <header>
+                <h2>Course Input Form</h2>
+                <div>This form is intended for course input.</div>
+            </header>
+
+            <div>
+                <label class="desc" id="ctitle" for="CourseField1">
+                    Title
+                </label>
+                <div>
+                    <input id="course1" required name="CourseField1" type="text" class="field text fn" value="" size="8"
+                     tabindex="1">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="ctype" for="CourseField2">
+                    Type
+                </label>
+                <div>
+                    <input id="course2" name="CourseField2" type="text" spellcheck="true" value="" maxlength="255"
+                        pattern ="[a-z]" tabindex="2">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="cstartdt" for="CourseField3">
+                    Start Date
+                </label>
+                <div>
+                    <input id="course3" name="CourseField3" type="date" tabindex="3">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="cenddt" for="CourseField4">
+                    End Date
+                </label>
+                <div>
+                    <input id="course4" name="CourseField4" type="date" tabindex="4">
+                </div>
+            </div>
+
+
+            <div>
+                <label class="desc" id="cstream" for="CourseField5">
+                    Select a Stream
+                </label>
+                <div>
+                    <select id="course5" name="CourseField6" class="field select medium" tabindex="5">
+                        <option value="Survival">Survival</option>
+                        <option value="Fauna">Fauna</option>
+                        <option value="Flora">Flora</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input id="saveForm" name="saveForm" type="submit" value="Add">
+                </div>
+            </div>
+
+        </form>
+
+        <table id="course-table" class="full-width">
+            <caption>Course Summary</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Stream</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Add Student</th>
+                    <th scope="col">Add Trainer</th>
+                    <th scope="col">Add Assignment</th>
+
+                </tr>
+            </thead>
+        </table>
+        <!-- <p><a href="#ex1" rel="modal:open">Click</a></p> -->
+        <div id="ex1" class="modal">
+            <p>Invalid date input, please revise.</p>
+            <a href="#" rel="modal:close">Close</a>
+        </div>
+    </section>
+    <section id="studentsPerCourse">
+        <form>
+            <header>
+                <h2>Student Input Form</h2>
+                <div>This form is intended for student input.</div>
+            </header>
+
+            <div>
+                <label class="desc" id="sfname" for="StudentField1">
+                    First Name
+                </label>
+                <div>
+                    <input id="student1" name="StudentField1" type="text" spellcheck="true" class="field text fn"
+                        value="" required size="8" pattern = "[a-z]" tabindex="5">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="slname" for="StudentField2">
+                    Last Name
+                </label>
+                <div>
+                    <input id="student2" name="StudentField2" type="text" spellcheck="true" value="" maxlength="255"
+                        required pattern = "[a-z]" tabindex="6">
+                </div>
+            </div>
+
+
+            <div>
+                <label class="desc" id="stuition" for="StudentField3">
+                    Tuition <span>&euro;</span>
+                </label>
+                <div>
+                    <input id="student3" name="StudentField3" type="number" min="0" tabindex="7">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="sdob" for="StudentField4">
+                    Date Of Birth
+                </label>
+                <div>
+                    <input id="student4" name="StudentField4" type="date" tabindex="8">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input id="studentForm" name="saveForm" type="submit" value="Add">
+                </div>
+            </div>
+        </form>
+        <table id="studentPerCourse-table" class="full-width">
+            <caption>Student per Course Summary</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Course Title</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Tuition</th>
+                    <th scope="col">Date Of Birth</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+    <section id="trainersPerCourse">
+        <form>
+            <header>
+                <h2>Trainer Input Form</h2>
+                <div>This form is intended for trainer input.</div>
+            </header>
+
+            <div>
+                <label class="desc" id="tfname" for="TrainerField1">
+                    First Name
+                </label>
+                <div>
+                    <input id="trainer1" name="TrainerField1" type="text" spellcheck="true" class="field text fn"
+                        value="" size="8" required pattern = "[a-z]" tabindex="9">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="tlname" for="TrainerField2">
+                    Last Name
+                </label>
+                <div>
+                    <input id="trainer2" name="TrainerField2" type="text" spellcheck="true" value="" maxlength="255"
+                    pattern = "[a-z]" tabindex="10">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input id="trainerForm" name="saveForm" type="submit" value="Add">
+                </div>
+            </div>
+        </form>
+        <table id="trainerPerCourse-table" class="full-width">
+            <caption>Trainer Per Course Summary</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Course Title</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+    <section id="assignmentsPerCourse">
+        <form>
+            <header>
+                <h2>Assignment Input Form</h2>
+                <div>This form is intended for assignment input.</div>
+            </header>
+
+            <div>
+                <label class="desc" id="atitle" for="AssignmentField1">
+                    Title
+                </label>
+                <div>
+                    <input id="assignment1" name="AssignmentField1" type="text" class="field text fn" value="" size="8"
+                        required tabindex="11">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="adescription" for="AssignmentField2">
+                    Description
+                </label>
+
+                <div>
+                    <textarea id="assignment2" name="AssignmentField2" spellcheck="true" rows="5" cols="30"
+                        tabindex="12"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="asubmdt" for="AssignmentField3">
+                    Submission Date Time
+                </label>
+                <div>
+                    <input id="assignment3" name="AssignmentField3" type="date" tabindex="13">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="aoralmark" for="AssignmentField4">
+                    Oral Mark
+                </label>
+                <div>
+                    <input id="assignment4" name="AssignmentField4" type="number" min="0" max="5" value="5.0" step="0.1"
+                        tabindex="14">
+                </div>
+            </div>
+            <div>
+                <label class="desc" id="atotalmark" for="AssignmentField5">
+                    Total Mark
+                </label>
+                <div>
+                    <input id="assignment5" name="AssignmentField5" type="number" min="0" max="20" value="20.0"
+                        step="0.1" tabindex="15">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input id="assignmentForm" name="saveForm" type="submit" value="Add">
+                </div>
+            </div>
+        </form>
+        <table id="assignmentsPerCourse-table" class="full-width">
+            <caption>Assignment Per Course Summary</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Submission Date</th>
+                    <th scope="col">Oral Mark</th>
+                    <th scope="col">Total Mark</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Add Student</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+    <section id="assignmentPerStudentPerCourse">
+        <form>
+            <header>
+                <h2>Student Input Form</h2>
+                <div>This form is intended for student input.</div>
+            </header>
+
+            <div>
+                <label class="desc" id="afname" for="StudentField1">
+                    First Name
+                </label>
+                <div>
+                    <input id="astudent1" name="StudentField1" type="text" spellcheck="true" class="field text fn"
+                        value="" pattern = "[a-z]" required size="8" tabindex="1">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="alname" for="StudentField2">
+                    Last Name
+                </label>
+                <div>
+                    <input id="astudent2" name="StudentField2" type="text" spellcheck="true" value="" maxlength="255"
+                    pattern = "[a-z]" required tabindex="2">
+                </div>
+            </div>
+
+
+            <div>
+                <label class="desc" id="astuition" for="StudentField3">
+                    Tuition <span>&euro;</span>
+                </label>
+                <div>
+                    <input id="astudent3" name="StudentField3" type="number" min="0" tabindex="3">
+                </div>
+            </div>
+
+            <div>
+                <label class="desc" id="asdob" for="StudentField4">
+                    Date Of Birth
+                </label>
+                <div>
+                    <input id="astudent4" name="StudentField4" type="date" tabindex="4">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input id="astudentForm" name="saveForm" type="submit" value="Add">
+                </div>
+            </div>
+        </form>
+        <table id="assignmentsPerStudentPerCouse-table" class="full-width">
+            <caption>Assignment Per Student Per Course Summary</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Course Title</th>
+                    <th scope="col">Assignment</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Tuition</th>
+                    <th scope="col">Date Of Birth</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+        </table>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+
+</html>

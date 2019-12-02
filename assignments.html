@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/c5a0aa5865.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" type="image/png" href="/img/clipart-trees-rainforest-15.png">
+    <title>Assignments</title>
+</head>
+
+<body>
+    <nav id="main-menu">
+        <ul class="nav-bar">
+            <li class="nav-button-home"><a href="index.html">Home</a></li>
+            <li class="nav-button-courses"><a href="courses.html">Courses</a></li>
+            <li class="nav-button-students"><a href="students.html">Students</a></li>
+            <li class="nav-button-trainers"><a href="trainers.html">Trainers</a></li>
+        </ul>
+    </nav>
+
+    <form>
+
+        <header>
+            <h2>Assignment Input Form</h2>
+            <div>This form is intended for assignment input.</div>
+        </header>
+
+        <div>
+            <label class="desc" id="atitle" for="AssignmentField1">
+                Title
+            </label>
+            <div>
+                <input id="assignment1" name="AssignmentField1" type="text" class="field text fn" value="" size="8" required tabindex="1">
+            </div>
+        </div>
+
+        <div>
+            <label class="desc" id="adescription" for="AssignmentField2">
+                Description
+            </label>
+
+            <div>
+                <textarea id="assignment2" name="AssignmentField2" spellcheck="true" rows="5" cols="30"
+                    tabindex="2"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <label class="desc" id="asubmdt" for="AssignmentField3">
+                Submission Date Time
+            </label>
+            <div>
+                <input id="assignment3" name="AssignmentField3" type="date" tabindex="3">
+            </div>
+        </div>
+
+        <div>
+            <label class="desc" id="aoralmark" for="AssignmentField4">
+                Oral Mark
+            </label>
+            <div>
+                <input id="assignment4" name="AssignmentField4" type="number" min="0" max="5" value="5.0" step="0.1"
+                    tabindex="4">
+            </div>
+        </div>
+        <div>
+            <label class="desc" id="atotalmark" for="AssignmentField5">
+                Total Mark
+            </label>
+            <div>
+                <input id="assignment5" name="AssignmentField5" type="number" min="0" max="20" value="20.0" step="0.1"
+                    tabindex="5">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input id="saveForm" name="saveForm" type="submit" value="Add">
+            </div>
+        </div>
+
+    </form>
+    <table id="assignment-table" class="full-width hide">
+        <caption>Assignment Summary</caption>
+        <thead>
+            <tr>
+                <th scope="col">Edit</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Submission Date</th>
+                <th scope="col">Oral Mark</th>
+                <th scope="col">Total Mark</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="js/assignments.js"></script>
+
+    </body>
+
+</html>

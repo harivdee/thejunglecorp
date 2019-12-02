@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/c5a0aa5865.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" type="image/png" href="/img/clipart-trees-rainforest-15.png">
+    <title>Students</title>
+</head>
+
+<body>
+    <nav id="main-menu">
+        <ul class="nav-bar">
+            <li class="nav-button-home"><a href="index.html">Home</a></li>
+            <li class="nav-button-courses"><a href="courses.html">Courses</a></li>
+            <li class="nav-button-trainers"><a href="trainers.html">Trainers</a></li>
+            <li class="nav-button-assignments"><a href="assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <form>
+
+        <header>
+            <h2>Student Input Form</h2>
+            <div>This form is intended for student input.</div>
+        </header>
+
+        <div>
+            <label class="desc" id="fname" for="StudentField1">
+                First Name
+            </label>
+            <div>
+                <input id="student1" name="StudentField1" type="text" spellcheck="true" class="field text fn" value=""
+                   required size="8" pattern="[a-z]" tabindex="1">
+            </div>
+        </div>
+
+        <div>
+            <label class="desc" id="lname" for="StudentField2">
+                Last Name
+            </label>
+            <div>
+                <input id="student2" name="StudentField2" type="text" spellcheck="true" value="" maxlength="255"
+                   required pattern="[a-z]" tabindex="2">
+            </div>
+        </div>
+
+
+        <div>
+            <label class="desc" id="stuition" for="StudentField3">
+                Tuition <span>&euro;</span>
+            </label>
+            <div>
+                <input id="student3" name="StudentField3" type="number" min="0" tabindex="3">
+            </div>
+        </div>
+
+        <div>
+            <label class="desc" id="sdob" for="StudentField4">
+                Date Of Birth
+            </label>
+            <div>
+                <input id="student4" name="StudentField4" type="date" tabindex="4">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input id="saveForm" name="saveForm" type="submit" value="Add">
+            </div>
+        </div>
+
+    </form>
+
+    <table id="student-table" class="full-width hide">
+        <caption>Student Summary</caption>
+        <thead>
+            <tr>
+                <th scope="col">Edit</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Tuition</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+    <script src="js/students.js"></script>
+</body>
+
+</html>
