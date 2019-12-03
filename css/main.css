@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-image:url(/img/image-from-rawpixel-id-597286-jpeg\ .jpg);
+  background-image:url(../img/image-from-rawpixel-id-597286-jpeg\ .jpg);
   background-position: center center;
   background-repeat:no-repeat;
   background-attachment: fixed;
@@ -140,7 +140,7 @@ body {
 }
 
 .nav-bar .nav-button-home a { 
-    background-image:url("/img/pixel-crochet-loom-beading.jpg"); 
+    background-image:url("../img/pixel-crochet-loom-beading.jpg"); 
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: -2px;
@@ -148,28 +148,28 @@ body {
 }
 
 .nav-bar .nav-button-students a { 
-    background:url("/img/th1.jpg"); 
+    background:url("../img/th1.jpg"); 
     background-repeat: no-repeat;
     background-position-y: -2px;
     background-size: contain; 
 }
 
 .nav-bar .nav-button-trainers a { 
-    background:url("/img/th3.jpg"); 
+    background:url("../img/th3.jpg"); 
     background-repeat: no-repeat;
     background-position-y: -2px;
     background-size: contain;    
 }
 
 .nav-bar .nav-button-assignments a { 
-    background:url("/img/th.jpg"); 
+    background:url("../img/th.jpg"); 
     background-repeat: no-repeat;
     background-position-y: -2px;
     background-size: contain;    
 }
 
 .nav-bar .nav-button-courses a { 
-    background:url("/img/th4.jpg"); 
+    background:url("../img/th4.jpg"); 
     background-repeat: no-repeat;
     background-position-y: -2px;
     background-size: contain;    
